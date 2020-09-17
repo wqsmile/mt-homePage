@@ -1,0 +1,118 @@
+.page-recommends {
+  width: 1190px;
+  margin: 0 auto;
+  margin-top: 40px;
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(
+        to right,
+        rgb(88, 174, 221) 2%,
+        rgb(66, 191, 205) 97%
+      )
+      rgb(88, 174, 221);
+
+    a {
+      margin-right: 20px;
+      color: #fff;
+      font-size: 14px;
+    }
+    dl {
+      display: flex;
+      margin-left: 20px;
+      color: #fff;
+
+      dt {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+      dd {
+        position: relative;
+        margin: 0 5px;
+        font-size: 14px;
+        cursor: pointer;
+
+        // &:hover {
+        &::after {
+          content: "";
+          position: absolute;
+          border: 5px solid transparent;
+          border-bottom: 7px solid #fff;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        // }
+      }
+    }
+  }
+
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #fff;
+
+
+
+    li > a {
+      display: inline-block;
+      width: 230px;
+      height: 226px;
+      padding-top: 20px;
+
+      &:hover {
+        background: #eee;
+        border-radius: 4px;
+        transition: all .5s;
+      }
+
+      .recom-bg {
+        width: 214px;
+        height: 120px;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 4px;
+        margin: 0 auto;
+      }
+
+      p {
+        margin: 8px 8px;
+      }
+      .title {
+        font-size: 16px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .comment {
+        position: relative;
+        .star {
+          color: #ccc;
+        }
+        .score {
+          position: absolute;
+          left: 0;
+          color: #FF9900;
+        }
+        .num {
+          font-size: 12px;
+          color: #ccc;
+        }
+      }
+      .area-name {
+        font-size: 12px;
+        color: #ccc;
+      }
+      .low-price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #FF6600;
+      }
+    }
+  }
+}

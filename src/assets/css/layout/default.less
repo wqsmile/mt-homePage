@@ -1,0 +1,32 @@
+@mt-window: {
+  width: 100%;
+  height: 100%;
+}
+.page-default {
+  @mt-window();
+}
+
+.el-container {
+  // background: #f8f8f8;
+  @mt-window();
+}
+
+.el-header {
+  height: auto !important;
+  line-height: 40px;
+  font-size: 12px;
+  padding: 0;
+  background: #f8f8f8;
+}
+
+.el-main {
+  padding: 0;
+  overflow: hidden;
+  background: #f8f8f8;
+  // margin-top: -50px;
+}
+
+.el-footer {
+  height: auto !important;
+  background: #f8f8f8;
+}

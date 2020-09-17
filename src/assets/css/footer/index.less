@@ -1,0 +1,101 @@
+@mt-color: #ffc300;
+@mt-font: {
+  color: #999;
+  font-size: 12px;
+};
+
+.footer-content {
+  width: 1190px;
+  margin: 0 auto;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+
+  .footer-column {
+    max-width: 220px;
+    dl {
+      margin-top: 20px;
+    }
+    dt {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    dd {
+      @mt-font();
+    }
+    a {
+      @mt-font();
+      line-height: 26px;
+      &:hover {
+        color: @mt-color;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  @mt-font();
+
+  a {
+    @mt-font();
+  }
+
+  .footer-copyright-left {
+    p {
+      margin: 8px 0;
+    }
+  }
+
+  .footer-copyright-right {
+    > a {
+      display: block;
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .footer-copyright-cert {
+      display: flex;
+      line-height: 38px;
+
+      a {
+        display: flex;
+      }
+
+      img:nth-child(1) {
+        width: 38px;
+        height: 38px;
+      }
+
+      @sp-ft: {
+        background: url("https://s0.meituan.net/bs/fe-web-meituan/8a39c6b/img/sprites/footer.png");
+        height: 38px;
+        margin: 0 2px;
+        text-indent: -9999px;
+      };
+      .sp-ft--record {
+        @sp-ft();
+        background-position: 0 -167px;
+        width: 109px;
+      }
+      .sp-ft--knet {
+        @sp-ft();
+        width: 107px;
+        background-position: 0 -127px;
+      }
+
+      .sp-ft--12315 {
+        @sp-ft();
+        width: 107px;
+        background-position: 0 -40px;
+      }
+    }
+  }
+}

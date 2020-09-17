@@ -1,0 +1,40 @@
+@mt-orange: #FE8C00;
+
+.m-geo {
+  display: flex;
+
+  .cur-pos,
+  .change-city.router-link-active {
+    color: #666;
+    :hover {
+      color: @mt-orange;
+    }
+  }
+  .change-city {
+    margin-left: 5px;
+    padding: 0px 2px;
+    border: 1px solid #ddd;
+  }
+  a {
+    color: #999;
+    &:hover {
+      color: @mt-orange;
+    }
+  }
+
+  .m-user {
+    margin-left: 25px;
+    a {
+      margin: 0 5px;
+      &:first-child {
+        color: @mt-orange;
+      }
+    }
+  }
+  .login.router-link-active {
+    color: @mt-orange;
+  }
+  .register.router-link-active {
+    margin-left: 7px;
+  }
+}

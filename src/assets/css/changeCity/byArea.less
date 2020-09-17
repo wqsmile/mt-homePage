@@ -1,0 +1,83 @@
+.by-area {
+  position: relative;
+
+  .wrap {
+    width: 130px;
+    height: 42px;
+    line-height: 40px;
+    border: 1px solid#ccc;
+    border-radius: 4px;
+    padding: 0 10px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  .select-city {
+    cursor: no-drop;
+  }
+
+  .detail {
+    position: absolute;
+    left: 20px;
+    top: 56px;
+    min-width: 260px;
+    height: 375px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 100;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 21px;
+      top: -5px;
+      width: 7px;
+      height: 7px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(45deg);
+      background: #fff;
+    }
+
+    .title {
+      height: 50px;
+      line-height: 50px;
+      margin-left: 15px;
+      color: #ddd;
+    }
+
+    .areas {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 320px;
+      padding-left: 5px;
+
+      li {
+        margin: 7px 10px;
+        font-size: 12px;
+        // width: 52px;
+
+        span {
+          cursor: pointer;
+          border-radius: 10px;
+          padding: 3px 8px;
+          color: #666;
+          &:hover {
+            background: #ddd;
+          }
+        }
+      }
+    }
+  }
+
+  .city-detail {
+    // width: 762px;
+  }
+}

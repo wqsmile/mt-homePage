@@ -1,0 +1,116 @@
+@mt-orange: #fe8c00;
+
+.m-nav > .nav {
+  display: flex;
+  justify-content: flex-end;
+  li {
+    border: 1px solid transparent;
+    border-bottom: none;
+    padding: 0 14px;
+    position: relative;
+    z-index: 100;
+
+    .router-link-active:hover {
+      color: @mt-orange;
+    }
+    &:hover {
+      &:not(:nth-child(2)) {
+        background: #fff;
+        border-color: #ccc;
+      }
+      .subContainer {
+        display: flex;
+      }
+    }
+    &:hover dl {
+      background: #fff;
+      height: auto;
+      border-color: #ccc;
+    }
+
+    > dl {
+      position: absolute;
+      right: -1px;
+      top: 40px;
+      width: 48px;
+      height: 0;
+      width: 76px;
+      border: 1px solid transparent;
+      border-top: none;
+      overflow: hidden;
+      text-align: center;
+    }
+    .merchants-center {
+      width: 106px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 30px;
+        border-top: 1px solid #ccc;
+      }
+    }
+  }
+  a {
+    color: #999;
+  }
+  // .subContainer > dl {
+  //   height: auto;
+  // }
+  .subContainer {
+    position: absolute;
+    // display: flex;
+    display: none;
+    right: -1px;
+    top: 40px;
+    width: 1115px;
+    height: 227px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 36px;
+    background: #fff;
+
+    dl {
+      position: relative;
+      top: 50px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin-right: 50px;
+      &:last-child {
+        margin-left: 50px;
+      }
+    }
+    .hotel {
+      width: 234px;
+      height: 130px;
+
+    }
+    .food {
+      width: 156px;
+      height: 80px;
+    }
+    .movie {
+      width: 90px;
+      height: 180px;
+    }
+    .app {
+      width: 380px;
+      height: 100px;
+      img {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+      }
+    }
+    dt {
+      position: absolute;
+      top: -50px;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+}
